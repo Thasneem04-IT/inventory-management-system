@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Edit Product</h1>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.product_id.label }}
+        {{ form.product_id(class="form-control") }}
+    </div>
+    <button type="submit" class="btn">Update Product</button>
+    <a href="{{ url_for('products') }}" class="btn cancel">Cancel</a>
+</form>
+{% endblock %}

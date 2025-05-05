@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Product Movements</h1>
+
+<div class="form-container">
+    <h2>Record New Movement</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.product_id.label }}
+            {{ form.product_id(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.from_location.label }}
+            {{ form.from_location(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.to_location.label }}
+            {{ form.to_location(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.qty.label }}
+            {{ form.qty(class="form-control") }}
+        </div>
+        <button type="submit" class="btn">Record Movement</button>
+    </form>
+</div>
+
+<div class="table-container">
+    <h2>Movement History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Product</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movement in movements %}
+            <tr>
+                <td>{{ movement.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+                <td>{{ movement.product_id }}</td>
+                <td>{{ movement.from_location if movement.from_location else '-' }}</td>
+                <td>{{ movement.to_location if movement.to_location else '-' }}</td>
+                <td>{{ movement.qty }}</td>
+                <td class="actions">
+                    <a href="{{ url_for('edit_movement', movement_id=movement.movement_id) }}" class="btn edit">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

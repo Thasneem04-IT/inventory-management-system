@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Edit Location</h1>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.location_id.label }}
+        {{ form.location_id(class="form-control") }}
+    </div>
+    <button type="submit" class="btn">Update Location</button>
+    <a href="{{ url_for('locations') }}" class="btn cancel">Cancel</a>
+</form>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Locations</h1>
+
+<div class="form-container">
+    <h2>Add New Location</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.location_id.label }}
+            {{ form.location_id(class="form-control") }}
+        </div>
+        <button type="submit" class="btn">Add Location</button>
+    </form>
+</div>
+
+<div class="table-container">
+    <h2>Existing Locations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Locations</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for location in locations %}
+            <tr>
+                <td>{{ location.location_id }}</td>
+                <td class="actions">
+                    <a href="{{ url_for('edit_location', location_id=location.location_id) }}" class="btn edit">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
