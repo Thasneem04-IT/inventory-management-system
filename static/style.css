@@ -1,131 +1,9 @@
-/* body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
 
-nav {
-  background: #333;
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 1rem;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.container {
-  padding: 2rem;
-}
-
-.alert {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-}
-
-.alert-success {
-  color: #155724;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-}
-
-.form-container {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-control {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.btn {
-  padding: 0.5rem 1rem;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn.edit {
-  background: #ffc107;
-  padding: 0.5rem 1rem;
-
-}
-
-.btn.delete {
-  background: #dc3545;
-  padding: 0.5rem 1rem;
-
-}
-
-.btn.cancel {
-  background: #6c757d;
-}
-
-.table-container {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-
-table th, table td {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-table th {
-  background-color: #f8f9fa;
-}
-
-.actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.actions form {
-  margin: 0;
-} */
-
-
-/* Root Theme Colors */
 :root {
-  --primary: #3B82F6;   /* Blue */
-  --success: #10B981;   /* Green */
-  --warning: #FACC15;   /* Yellow */
-  --danger: #EF4444;    /* Red */
+  --primary: #3B82F6;  
+  --success: #10B981;   
+  --warning: #FACC15;  
+  --danger: #EF4444;  
   --gray-light: #f9fafb;
   --gray-dark: #374151;
   --text-dark: #1F2937;
@@ -134,7 +12,7 @@ table th {
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Reset + Base */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f3f4f6;
@@ -154,7 +32,6 @@ h1, h2 {
   padding: 40px;
 }
 
-/* Navbar */
 nav {
   background-color: var(--gray-dark);
   padding: 10px 20px;
@@ -171,7 +48,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Form Container */
+
 .form-container {
   background-color: var(--gray-light);
   padding: 20px;
@@ -180,7 +57,6 @@ nav a:hover {
   margin-bottom: 40px;
 }
 
-/* Form Elements */
 .form-group {
   margin-bottom: 15px;
 }
@@ -193,7 +69,7 @@ nav a:hover {
   font-size: 14px;
 }
 
-/* Buttons */
+
 .btn {
   padding: 10px 16px;
   font-size: 14px;
@@ -213,9 +89,7 @@ nav a:hover {
   opacity: 0.95;
 }
 
-/* .btn.primary {
-  background-color: orange;
-} */
+
 
 .btn.edit {
   background-color: #f9fafb;
@@ -229,14 +103,8 @@ nav a:hover {
   border: 1px solid #1F2937;
 }
 
-/* button[disabled],
-.btn:disabled {
-  background-color: #d1d5db;
-  color: #ec2ce0;
-  cursor: not-allowed;
-} */
 
-/* Table Container */
+
 .table-container {
   background-color: var(--white);
   padding: 20px;
